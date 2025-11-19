@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riverview Inn — Contact</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Background COlor */
+    body {
+      background:
+        radial-gradient(circle at top left, #e0f3ff 0, #f7e8ff 38%, #fff6e5 100%);
+    }
+
+    main {
+      padding-bottom: 48px;
+    }
+    header {
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    /* ---- Extra Contact Page Styling ---- */
+
+    main.contact-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 1fr);
+      gap: 22px;
+    }
+
+    .contact-card form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-card label {
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .contact-card input,
+    .contact-card select,
+    .contact-card textarea {
+      width: 100%;
+      padding: 7px 9px;
+      border-radius: 6px;
+      border: 1px solid #cfd7e3;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-card input:focus,
+    .contact-card select:focus,
+    .contact-card textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 2px rgba(31, 122, 224, 0.18);
+    }
+
+    .msg-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: -4px;
+      margin-bottom: 4px;
+    }
+
+    .msg-meta span {
+      margin-top: 2px;
+    }
+
+    .msg-meta .counter-warning {
+      color: #b00020;
+    }
+
+    .contact-status {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-status.success {
+      color: #0a7a3b;
+    }
+
+    @media (max-width: 800px) {
+      main.contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container brand">
+    <img src="Library/rivers.png" alt="Riverview Inn logo" />
+    <div>
+      <a href="Index.html">
+        <strong>Riverview Inn</strong>
+        <div class="small muted">Your Comfort by the River</div>
+      </a>
+    </div>
+  </div>
+  <nav class="container" aria-label="Primary">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="your-bookings.html">Your Bookings</a></li>
+      <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="contact-layout">
+  <!-- FORM -->
+  <section class="card shadow contact-card">
+    <h2>Send a Message</h2>
+    <p class="small">
+      Questions about bookings, groups, or accessibility? Send us a note and we’ll get back to you.
+    </p>
+
+    <form id="contact-form">
+      <div>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>General</option>
+          <option>Group Booking</option>
+          <option>Accessibility</option>
+          <option>Special Requests</option>
+        </select>
+      </div>
+      <div>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="4" maxlength="500" required></textarea>
+        <div class="msg-meta">
+          <span>Max 500 characters</span>
+          <span id="msg-counter">500 remaining</span>
+        </div>
+      </div>
+      <button type="submit">Send Message</button>
+
+      <p id="contact-status" class="contact-status"></p>
+    </form>
+  </section>
+
+  <!-- MAP -->
+  <section class="card shadow" aria-labelledby="map-title">
+    <h2 id="map-title">Find Us</h2>
+    <p>We're conveniently located downtown, just steps from the river.</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.415517812948!2d-120.33010572384705!3d50.67400997162833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2d6f703c2f7f%3A0xf7a847f32d2b3f7b!2s100%20Lorne%20St%2C%20Kamloops%2C%20BC%20V2C%201V9%2C%20Canada!5e0!3m2!1sen!2sca!4v1732087001234!5m2!1sen!2sca"
+      width="100%" height="360"
+      style="border:0;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <p class="small muted">
+      1234 Riverside Rd, Kamloops, BC V2C 1A1<br>
+      <a href="https://www.google.com/maps?q=100+Lorne+St,+Kamloops,+BC+V2C+1V9" target="_blank" rel="noopener noreferrer">
+        View larger map on Google Maps
+      </a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="rooms.html">Rooms</a>
+      <a href="your-bookings.html">Your Bookings</a>
+      <a href="contact.html">Contact</a>
+      <a href="refrences.html">Refrences</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Contact form interactivity ----
+
+  const msgEl = document.getElementById("msg");
+  const counterEl = document.getElementById("msg-counter");
+  const statusEl = document.getElementById("contact-status");
+  const formEl = document.getElementById("contact-form");
+
+  const MAX_LEN = 500;
+
+  msgEl.addEventListener("input", () => {
+    const remaining = MAX_LEN - msgEl.value.length;
+    counterEl.textContent = `${remaining} remaining`;
+    if (remaining <= 50) {
+      counterEl.classList.add("counter-warning");
+    } else {
+      counterEl.classList.remove("counter-warning");
+    }
+  });
+
+  formEl.addEventListener("submit", e => {
+    e.preventDefault();
+
+    statusEl.textContent = "Sending...";
+    statusEl.classList.remove("success");
+
+    // Simulated send delay
+    setTimeout(() => {
+      statusEl.textContent = "Thanks! We’ve received your message and will respond shortly.";
+      statusEl.classList.add("success");
+      formEl.reset();
+      counterEl.textContent = `${MAX_LEN} remaining`;
+      counterEl.classList.remove("counter-warning");
+    }, 600);
+  });
+</script>
+</body>
+</html>
