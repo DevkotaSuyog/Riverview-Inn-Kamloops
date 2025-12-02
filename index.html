@@ -465,6 +465,37 @@
         font-size: 0.98rem;
       }
     }
+    /* For VIDEO & PHOTO PREVIEW */
+.promo-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.promo-media {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.promo-media img,
+.promo-media video {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #000;
+}
+
+@media (max-width: 800px) {
+  .promo-split {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -628,30 +659,35 @@
     </div>
   </section>
 
-  <!-- VIDEO PREVIEW -->
-  <section class="container fade-in" aria-labelledby="inside-title">
-    <h2 id="inside-title" class="small muted">Inside Riverview Inn</h2>
-    <div class="card shadow" style="display:grid;grid-template-columns:minmax(0,1.1fr) 360px;gap:16px;align-items:center;">
-      <div>
-        <p>
-          From the moment you walk into our lobby, you'll notice the calm, cozy feel of Riverview Inn.
-          Soft lighting, comfortable seating, and friendly staff set the tone for a relaxing stay in Kamloops.
-        </p>
-        <p class="small muted">
-          Whether you're checking in after a long drive or coming back from a day on the trails,
-          our lobby is your first stop to unwind, refresh, and feel at home.
-        </p>
-      </div>
-      <figure class="round" style="margin:0;overflow:hidden;">
-        <img
-          src="Library/lobby.avif"
-          alt="Lobby area at Riverview Inn"
-          class="img-cover"
-          style="width:100%;height:240px;object-fit:cover;"
+  <!-- VIDEO PREVIEW & PHOTO PREVIEW -->
+  <section class="container fade-in" aria-labelledby="promo-title">
+    <h2 id="promo-title" class="small muted">Inside Riverview Inn</h2>
+  
+    <div class="promo-split card shadow">
+      
+      <!-- LEFT SIDE — IMAGE -->
+      <figure class="promo-media">
+        <img 
+          src="Library/Kamloops.jpg" 
+          alt="Riverside view near Riverview Inn"
         />
+        <figcaption class="small muted">The stunning riverfront just steps away.</figcaption>
       </figure>
+  
+      <!-- RIGHT SIDE — VIDEO -->
+      <div class="promo-media">
+        <video
+          src="Library/lobby.mp4"
+          controls
+          muted
+          poster="Library/logo2.png"
+        ></video>
+        <p class="small muted">Take a look inside our welcoming lobby.</p>
+      </div>
+  
     </div>
   </section>
+  
 
   <!-- HIGHLIGHTS / AMENITIES -->
   <section class="container fade-in" aria-labelledby="highlights-title">
