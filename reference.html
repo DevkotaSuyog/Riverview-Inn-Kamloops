@@ -47,6 +47,19 @@
       color: var(--brand);
       text-decoration: underline;
     }
+
+    /* ===== Fix bullets for lists inside .about-card only =====
+       This is intentionally specific so it doesn't affect other pages.
+    */
+    .about-card ul {
+      list-style: disc;
+      list-style-position: outside;
+      padding-left: 1.25rem; /* space for bullets */
+      margin: 0.5rem 0;
+    }
+    .about-card ul li {
+      margin: 0.35rem 0;
+    }
   </style>
 </head>
 <body>
@@ -150,6 +163,9 @@
   </footer>
 
   <script src="main.js"></script>
+
+</body>
+</html>
 
 </body>
 </html>
