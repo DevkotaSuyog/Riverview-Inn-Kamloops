@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riverview Inn — About & References</title>
+
+  <!-- Use your project's stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Small page-specific tweaks so this page matches the rest */
+    .about-hero {
+      padding: 28px 16px;
+      max-width: 1100px;
+      margin: 0 auto 8px;
+    }
+    .about-grid {
+      max-width: 1100px;
+      margin: 10px auto 36px;
+      padding: 18px;
+      display: grid;
+      gap: 18px;
+    }
+    .about-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .about-card h2 {
+      margin-top: 0;
+    }
+    .team-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 6px 0 12px;
+    }
+    .team-member {
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #e6f2ff;
+    }
+    a.reference-link {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (matches other pages) -->
+  <header>
+    <div class="container brand">
+      <img src="Library/rivers.png" alt="Riverview Inn logo" />
+      <div>
+        <strong>Riverview Inn</strong>
+        <div class="small muted">Your Comfort by the River</div>
+      </div>
+
+      <!-- hamburger for mobile -->
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open main menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav id="primary-nav" class="primary-nav container" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="your-bookings.html">Your Bookings</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <section class="about-hero">
+      <h1>About Us</h1>
+      <p class="small muted">
+        Riverview Inn is a peaceful riverside hotel offering comfortable rooms,
+        friendly service, and a relaxing stay for our guests. This website was created
+        as a school project to demonstrate a clean, user-friendly hotel booking experience.
+      </p>
+
+      <div class="team-list" aria-hidden="false" role="list">
+        <div class="team-member" role="listitem"><strong>Suyog Devkota</strong></div>
+        <div class="team-member" role="listitem"><strong>Anurag Nain</strong></div>
+        <div class="team-member" role="listitem"><strong>Ramandeep Kaur</strong></div>
+      </div>
+
+      <p class="small muted">
+        We worked together on design, content, and front-end implementation to build
+        a modern and welcoming website experience.
+      </p>
+    </section>
+
+    <section class="about-grid">
+      <!-- Image References -->
+      <article class="about-card">
+        <h2>Image References</h2>
+
+        <p class="small muted">
+          Below are the images used on the site. If you have a precise credit (photographer, license, URL),
+          replace the placeholder text with the real details.
+        </p>
+
+        <ul>
+          <li><strong>Hero banner</strong> — Kamloops Tourism  
+            <a class="reference-link" href="https://www.tourismkamloops.com/" target="_blank">tourismkamloops.com</a>
+          </li>
+
+          <li><strong>Kamloops river photo</strong> — Kamloops Tourism  
+            <a class="reference-link" href="https://www.tourismkamloops.com/" target="_blank">tourismkamloops.com</a>
+          </li>
+
+          <li><strong>Queen room</strong> — AI generated image</li>
+          <li><strong>King room</strong> — AI generated image</li>
+          <li><strong>Family suite</strong> — AI generated image</li>
+          <li><strong>Lobby video / photo</strong> — (source not provided)</li>
+        </ul>
+      </article>
+
+      <!-- General references -->
+      <article class="about-card">
+        <h2>General References</h2>
+
+        <p class="small muted">Resources used while building this project:</p>
+
+        <ul>
+          <li>W3Schools — for HTML/CSS structure guidance</li>
+          <li>ChatGPT — for help with code, layout, and debugging</li>
+          <li>Kamloops Tourism — destination info and landscape photography</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="your-bookings.html">Your Bookings</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="small muted">© Riverview Inn</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
+
